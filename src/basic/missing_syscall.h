@@ -43,7 +43,7 @@ static inline int missing_pivot_root(const char *new_root, const char *put_old) 
 #      define __NR_memfd_create 319
 #    elif defined __arm__
 #      define __NR_memfd_create 385
-#    elif defined __aarch64__
+#    elif (defined __aarch64__ || defined __loongarch64)
 #      define __NR_memfd_create 279
 #    elif defined __s390__
 #      define __NR_memfd_create 350
@@ -92,7 +92,7 @@ static inline int missing_memfd_create(const char *name, unsigned int flags) {
 #      define __NR_getrandom 355
 #    elif defined(__arm__)
 #      define __NR_getrandom 384
-#   elif defined(__aarch64__)
+#    elif (defined(__aarch64__) || defined(__loongarch64))
 #      define __NR_getrandom 278
 #    elif defined(__ia64__)
 #      define __NR_getrandom 1339
@@ -157,7 +157,7 @@ static inline pid_t missing_gettid(void) {
 #      define __NR_name_to_handle_at 370
 #    elif defined(__powerpc__)
 #      define __NR_name_to_handle_at 345
-#    elif defined(__arc__)
+#    elif (defined(__arc__) || defined(__loongarch64))
 #      define __NR_name_to_handle_at 264
 #    else
 #      error "__NR_name_to_handle_at is not defined"
@@ -194,7 +194,7 @@ static inline int missing_name_to_handle_at(int fd, const char *name, struct fil
 #      define __NR_setns 308
 #    elif defined(__i386__)
 #      define __NR_setns 346
-#    elif defined(__arc__)
+#    elif (defined(__arc__) || defined(__loongarch64))
 #      define __NR_setns 268
 #    else
 #      error "__NR_setns is not defined"
@@ -235,7 +235,7 @@ static inline pid_t raw_getpid(void) {
 #      define __NR_renameat2 316
 #    elif defined __arm__
 #      define __NR_renameat2 382
-#    elif defined __aarch64__
+#    elif (defined __aarch64__ || defined __loongarch64)
 #      define __NR_renameat2 276
 #    elif defined _MIPS_SIM
 #      if _MIPS_SIM == _MIPS_SIM_ABI32
@@ -344,7 +344,7 @@ static inline key_serial_t missing_request_key(const char *type, const char *des
 #      define __NR_copy_file_range 285
 #    elif defined __powerpc__
 #      define __NR_copy_file_range 379
-#    elif defined __arc__
+#    elif (defined __arc__ || defined __loongarch64)
 #      define __NR_copy_file_range 285
 #    else
 #      warning "__NR_copy_file_range not defined for your architecture"
@@ -386,7 +386,7 @@ static inline ssize_t missing_copy_file_range(int fd_in, loff_t *off_in,
 #      define __NR_bpf 349
 #    elif defined __s390__
 #      define __NR_bpf 351
-#    elif defined __tilegx__
+#    elif (defined __tilegx__ || defined __loongarch64)
 #      define __NR_bpf 280
 #    else
 #      warning "__NR_bpf not defined for your architecture"
@@ -423,6 +423,8 @@ static inline int missing_bpf(int cmd, union bpf_attr *attr, size_t size) {
 #      define __NR_pkey_mprotect 394
 #    elif defined __aarch64__
 #      define __NR_pkey_mprotect 394
+#    elif defined __loongarch64
+#      define __NR_pkey_mprotect 288
 #    elif defined __powerpc__
 #      define __NR_pkey_mprotect 386
 #    elif defined __s390__
@@ -461,6 +463,8 @@ static inline int missing_bpf(int cmd, union bpf_attr *attr, size_t size) {
 #      define __NR_statx 360
 #    elif defined __x86_64__
 #      define __NR_statx 332
+#    elif defined __loongarch64
+#      define __NR_statx 291
 #    else
 #      warning "__NR_statx not defined for your architecture"
 #    endif
