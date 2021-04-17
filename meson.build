@@ -1505,6 +1505,9 @@ if get_option('efi')
         elif efi_arch == 'aarch64'
                 EFI_MACHINE_TYPE_NAME = 'aa64'
                 gnu_efi_arch = 'aarch64'
+        elif efi_arch == 'loongarch64'
+                EFI_MACHINE_TYPE_NAME = 'loongarch64'
+                gnu_efi_arch = 'loongarch64'
         else
                 EFI_MACHINE_TYPE_NAME = ''
                 gnu_efi_arch = ''

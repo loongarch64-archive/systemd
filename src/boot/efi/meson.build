@@ -181,6 +181,9 @@ if have_gnu_efi
                 # instead, and add required symbols manually.
                 efi_ldflags += ['--defsym=EFI_SUBSYSTEM=0xa']
                 efi_format = ['-O', 'binary']
+        elif efi_arch == 'loongarch64'
+                efi_ldflags += ['--defsym=EFI_SUBSYSTEM=0xa']
+                efi_format = ['-O', 'binary']
         else
                 efi_format = ['--target=efi-app-@0@'.format(gnu_efi_arch)]
         endif
