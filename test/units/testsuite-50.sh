@@ -97,6 +97,11 @@ elif [ "${machine}" = "ia64" ]; then
     verity_guid=86ed10d5-b607-45bb-8957-d350f23d0571
     signature_guid=e98b36ee-32ba-4882-9b12-0ce14655f46a
     architecture="ia64"
+elif [ "${machine}" = "loongarch64" ]; then
+    root_guid=77055800-792c-4f94-b39a-98c91b762bb6
+    verity_guid=f3393b22-e9af-4613-a948-9d3bfbd0c535
+    signature_guid=5afb67eb-ecc8-4f85-ae8e-ac1e7c50e7d0
+    architecture="loongarch64"
 elif [ "${machine}" = "ppc64le" ]; then
     # There's no support of PPC in the discoverable partitions specification yet, so skip the rest for now
     echo OK >/testok
