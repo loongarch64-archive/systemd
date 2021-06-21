@@ -49,6 +49,8 @@ DEF_TEMPLATE_A = '''\
 DEF_TEMPLATE_B = '''\
 #  if defined(__aarch64__)
 #    define systemd_NR_{syscall} {nr_arm64}
+#  elif defined(__loongarch64)
+#    define systemd_NR_{syscall} {nr_loongarch64}
 #  elif defined(__alpha__)
 #    define systemd_NR_{syscall} {nr_alpha}
 #  elif defined(__arc__) || defined(__tilegx__)
