@@ -40,9 +40,9 @@ clock_settime	112
 clock_settime64
 clone	220
 clone2
-clone3
+clone3	435
 close	57
-close_range
+close_range	436
 connect	203
 copy_file_range	285
 creat
@@ -57,7 +57,7 @@ epoll_create1	20
 epoll_ctl	21
 epoll_ctl_old
 epoll_pwait	22
-epoll_pwait2
+epoll_pwait2	441
 epoll_wait
 epoll_wait_old
 eventfd
@@ -69,9 +69,9 @@ execveat	281
 exit	93
 exit_group	94
 faccessat	48
-faccessat2
+faccessat2	439
 fadvise64	223
-fadvise64_64	223
+fadvise64_64
 fallocate	47
 fanotify_init	262
 fanotify_mark	263
@@ -82,7 +82,7 @@ fchown	55
 fchown32
 fchownat	54
 fcntl	25
-fcntl64	25
+fcntl64
 fdatasync	83
 fgetxattr	10
 finit_module	273
@@ -91,19 +91,19 @@ flock	32
 fork
 fp_udfiex_crtl
 fremovexattr	16
-fsconfig
+fsconfig	431
 fsetxattr	7
-fsmount
-fsopen
-fspick
+fsmount	432
+fsopen	430
+fspick	433
 fstat	80
-fstat64	80
-fstatat64	79
+fstat64
+fstatat64
 fstatfs	44
-fstatfs64	44
+fstatfs64
 fsync	82
 ftruncate	46
-ftruncate64	46
+ftruncate64
 futex	98
 futex_time64
 futimesat
@@ -167,9 +167,9 @@ io_pgetevents	292
 io_pgetevents_time64
 io_setup	0
 io_submit	2
-io_uring_enter
-io_uring_register
-io_uring_setup
+io_uring_enter	426
+io_uring_register	427
+io_uring_setup	425
 ioctl	29
 ioperm
 iopl
@@ -178,10 +178,13 @@ ioprio_set	30
 ipc
 kcmp	272
 kern_features
-kexec_file_load
+kexec_file_load	294
 kexec_load	104
 keyctl	219
 kill	129
+landlock_add_rule	445
+landlock_create_ruleset	444
+landlock_restrict_self	446
 lchown
 lchown32
 lgetxattr	9
@@ -211,11 +214,11 @@ mlock	228
 mlock2	284
 mlockall	230
 mmap	222
-mmap2	222
+mmap2
 modify_ldt
 mount	40
-mount_setattr
-move_mount
+mount_setattr	442
+move_mount	429
 move_pages	239
 mprotect	226
 mq_getsetattr	185
@@ -251,9 +254,9 @@ oldumount
 olduname
 open
 open_by_handle_at	265
-open_tree
+open_tree	428
 openat	56
-openat2
+openat2	437
 or1k_atomic
 osf_adjtime
 osf_afs_syscall
@@ -373,9 +376,9 @@ perf_event_open	241
 perfctr
 perfmonctl
 personality	92
-pidfd_getfd
-pidfd_open
-pidfd_send_signal
+pidfd_getfd	438
+pidfd_open	434
+pidfd_send_signal	424
 pipe
 pipe2	59
 pivot_root	41
@@ -390,7 +393,7 @@ pread64	67
 preadv	69
 preadv2	286
 prlimit64	261
-process_madvise
+process_madvise	440
 process_vm_readv	270
 process_vm_writev	271
 pselect6	72
@@ -401,6 +404,7 @@ pwritev	70
 pwritev2	287
 query_module
 quotactl	60
+quotactl_path	443
 read	63
 readahead	213
 readdir
@@ -416,7 +420,7 @@ recvmsg	212
 remap_file_pages	234
 removexattr	14
 rename
-renameat	38
+renameat
 renameat2	276
 request_key	218
 restart_syscall	128
@@ -462,7 +466,7 @@ semtimedop	192
 semtimedop_time64
 send
 sendfile	71
-sendfile64	71
+sendfile64
 sendmmsg	269
 sendmsg	211
 sendto	206
@@ -526,7 +530,7 @@ ssetmask
 stat
 stat64
 statfs	43
-statfs64	43
+statfs64
 statx	291
 stime
 subpage_prot
@@ -538,7 +542,7 @@ symlink
 symlinkat	36
 sync	81
 sync_file_range	84
-sync_file_range2	84
+sync_file_range2
 syncfs	267
 sys_debug_setcontext
 syscall
@@ -565,7 +569,7 @@ timerfd_settime64
 times	153
 tkill	130
 truncate	45
-truncate64	45
+truncate64
 ugetrlimit
 umask	166
 umount
